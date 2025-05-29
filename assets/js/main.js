@@ -756,3 +756,146 @@ document.addEventListener("DOMContentLoaded", function () {
 
   animateOnScroll();
 });
+
+//resume btt
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize feather icons
+  feather.replace();
+
+  // State variables
+  let scrollDirection = "up"; // Start with up direction
+  let scrollAmount = 0;
+  let rotation = 0;
+  let isAtTopOrBottom = false;
+  let lastScrollPos = window.pageYOffset;
+  let isScrolling = false;
+  let scrollStopTimer = null;
+  let animationId = null;
+  let circleInstance = null;
+
+  // DOM elements
+  const circleTextRef = document.getElementById("circleText");
+  const downloadBtn = document.getElementById("downloadBtn");
+  const arrowUp = document.getElementById("arrowUp");
+  const arrowDown = document.getElementById("arrowDown");
+
+  // Initialize CircleType for circular text
+  if (circleTextRef) {
+    circleInstance = new CircleType(circleTextRef);
+    circleInstance.radius(35);
+  }
+
+  // Check if at top or bottom of page
+  const checkIfAtTopOrBottom = () => {
+    const scrollY = window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    const docHeight = document.documentElement.scrollHeight;
+    const buffer = 5;
+
+    isAtTopOrBottom =
+      scrollY <= buffer || scrollY + windowHeight >= docHeight - buffer;
+  };
+
+  // Handle scroll events
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    const delta = currentScrollPos - lastScrollPos;
+
+    // Determine scroll direction
+    if (currentScrollPos > lastScrollPos) {
+      // Scrolling down
+      if (scrollDirection !== "down") {
+        scrollDirection = "down";
+        arrowUp.classList.add("hidden");
+        arrowDown.classList.remove("hidden");
+      }
+    } else if (currentScrollPos < lastScrollPos) {
+      // Scrolling up
+      if (scrollDirection !== "up") {
+        scrollDirection = "up";
+        arrowDown.classList.add("hidden");
+        arrowUp.classList.remove("hidden");
+      }
+    }
+
+    // Update scroll amount (absolute value)
+    scrollAmount = Math.abs(delta);
+    lastScrollPos = currentScrollPos;
+
+    // Check if we're at top or bottom
+    checkIfAtTopOrBottom();
+
+    // Mark that scrolling is happening
+    isScrolling = true;
+
+    // Clear any existing timeout
+    if (scrollStopTimer) {
+      clearTimeout(scrollStopTimer);
+    }
+
+    // Set a new timeout to detect when scrolling stops
+    scrollStopTimer = setTimeout(() => {
+      isScrolling = false;
+    }, 100);
+  };
+
+  // Animation loop for rotating text
+  const animateRotation = () => {
+    // Only rotate when scrolling is happening
+    if (isScrolling) {
+      const speedFactor = 0.2;
+      const rotationDelta =
+        scrollAmount * speedFactor * (scrollDirection === "down" ? 1 : -1);
+      rotation = (rotation + rotationDelta) % 360;
+    }
+    // Stop rotation completely when not scrolling (removed the idle rotation)
+    else {
+      rotation = rotation; // Maintain current rotation but don't change it
+    }
+
+    // Apply rotation to the circular text
+    if (circleTextRef) {
+      circleTextRef.style.transform = `rotate(${rotation}deg)`;
+      circleTextRef.style.transition = isScrolling
+        ? "transform 0.1s ease-out"
+        : "transform 0.3s ease-out";
+    }
+
+    animationId = requestAnimationFrame(animateRotation);
+  };
+
+  // Handle download button click
+  const handleDownload = () => {
+    const resumeUrl =
+      "https://drive.google.com/file/d/1OyXg8Uwt3ZM4Hhkk-Qyyzeu5syWprrl1/view?usp=sharing";
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.download = "samarth.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  // Set up event listeners
+  window.addEventListener("scroll", handleScroll);
+  downloadBtn.addEventListener("click", handleDownload);
+
+  // Initial check for position
+  checkIfAtTopOrBottom();
+
+  // Start the animation loop
+  animationId = requestAnimationFrame(animateRotation);
+
+  // Cleanup function
+  return () => {
+    window.removeEventListener("scroll", handleScroll);
+    if (scrollStopTimer) {
+      clearTimeout(scrollStopTimer);
+    }
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
+    downloadBtn.removeEventListener("click", handleDownload);
+  };
+});

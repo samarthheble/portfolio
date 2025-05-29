@@ -96,3 +96,40 @@
 .hover-move-right:hover {
   transform: translateX(5px);
 }
+
+/* resume btt  */
+
+/* Additional styles to match the original exactly */
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+
+.arrow-container {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+}
+.arrow-icon {
+  position: absolute;
+  transition: all 0.3s ease;
+}
+.arrow-up {
+  transform: translateY(0);
+  opacity: 1;
+}
+.arrow-down {
+  transform: translateY(0);
+  opacity: 1;
+}
+.arrow-up.hidden {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+.arrow-down.hidden {
+  transform: translateY(10px);
+  opacity: 0;
+}
