@@ -1,0 +1,98 @@
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.duration-300 {
+  transition-duration: 300ms;
+}
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Education section code */
+
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(20px);
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* project section code  */
+
+.project-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.project-hover {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.project-card:hover .project-hover {
+  opacity: 1;
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s forwards;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* skill section code  */
+
+.progress-bar {
+  width: 0;
+  transition: width 1.2s ease-in-out;
+}
+
+/* Footer section code  */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.hover-move-right {
+  transition: transform 0.3s ease;
+}
+
+.hover-move-right:hover {
+  transform: translateX(5px);
+}

@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samarth Heble</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="assets/images/sam.png"
+      type="image/x-icon"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <script src="https://unpkg.com/react-icons@4.12.0/fi/index.js"></script>
+    <script src="https://unpkg.com/framer-motion@10.16.4/dist/framer-motion.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-icons/4.11.0/fi.esm.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- NAvbar section  -->
+    <nav
+      class="bg-white dark:bg-gray-900 shadow-md fixed w-full top-0 left-0 right-0 z-50"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center space-x-2">
+            <a
+              href="#home"
+              class="text-xl font-extrabold flex items-center space-x-1 transition-all hover:scale-105 duration-300"
+            >
+              <!-- SHLogo placeholder - replace with your actual logo -->
+              <div class="w-[35px] h-[35px] rounded-full">
+                <img height="35" src="assets/images/logo.svg" alt="" />
+              </div>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="/"
+              class="text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium transition-colors"
+              >About</a
+            >
+            <a
+              href="#education"
+              class="text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium transition-colors"
+              >Education</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#skills"
+              class="text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium transition-colors"
+              >Skills</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 px-3 py-2 text-sm font-medium transition-colors"
+              >Contact</a
+            >
+          </div>
+
+          
+          <div class="flex items-center space-x-4">
+            <!-- Mobile menu button -->
+            <div class="md:hidden flex items-center">
+              <button
+                id="mobileMenuButton"
+                class="inline-flex items-center justify-center p-2 rounded-md text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none transition-colors"
+                aria-expanded="false"
+              >
+                <span class="sr-only">Open main menu</span>
+                <i id="menuIcon" data-feather="menu"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation -->
+      <div
+        id="mobileMenu"
+        class="md:hidden transition-all duration-300 ease-in-out overflow-hidden max-h-0"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white dark:bg-gray-900">
+          <a
+            href="/"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >About</a
+          >
+          <a
+            href="#education"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >Education</a
+          >
+          <a
+            href="#projects"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#skills"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >Skills</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- About Section -->
+    <section
+      id="about"
+      class="py-8 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900 relative overflow-hidden"
+    >
+      <!-- Background particles -->
+      <div
+        id="particles-container"
+        class="absolute inset-0 overflow-hidden pointer-events-none"
+      ></div>
+
+      <!-- Floating particles around profile image -->
+      <div
+        class="hidden lg:block absolute left-1/4 top-1/2 w-64 h-64 pointer-events-none"
+        id="profile-particles"
+      ></div>
+
+      <div class="max-w-7xl mt-16 mx-auto relative z-10">
+        <div id="about-header" class="text-center mb-12">
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4"
+          >
+            About <span class="text-indigo-600 dark:text-indigo-400">Me</span>
+          </h2>
+          <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+          <!-- Profile Image -->
+          <div
+            id="profile-image"
+            class="w-full lg:w-1/3 flex justify-center relative"
+          >
+            <div
+              class="relative w-64 h-64 sm:w-70 sm:h-70 rounded-full overflow-hidden border-4 border-indigo-500 dark:border-indigo-400 shadow-lg z-10"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-indigo-400 to-purple-500 opacity-20"
+              ></div>
+              <img
+                src="assets/images/sam.png"
+                alt="Profile"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <!-- Decorative floating elements around profile -->
+            <div
+              id="decorative-circle-1"
+              class="absolute -top-4 -left-4 w-16 h-16 rounded-full bg-indigo-100 dark:bg-indigo-900/50 opacity-70"
+            ></div>
+            <div
+              id="decorative-circle-2"
+              class="absolute -bottom-4 -right-4 w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/50 opacity-70"
+            ></div>
+          </div>
+
+          <!-- About Content -->
+          <div class="w-full lg:w-2/3">
+            <h3
+              class="text-2xl font-semibold text-gray-800 dark:text-white mb-4"
+            >
+              I'm a
+              <span class="text-indigo-600 dark:text-indigo-400"
+                >Passionate Developer</span
+              >
+            </h3>
+
+            <p class="text-gray-600 dark:text-gray-300 mb-2 leading-relaxed">
+              Hello! I'm Samarth Heble, Passionate computer science student from
+              Rajarshi Shahu Mahavidyalaya, Latur (Autonomous). With a strong
+              foundation in web development , I specialize in creating digital
+              experiences using Html, Css, and react.
+            </p>
+
+            <p class="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+              I am excited to showcase my projects and skills, and I'm always
+              looking to learn and grow as a developer.
+            </p>
+
+            <!-- Social Media Links -->
+            <div class="mb-8">
+              <h4
+                class="text-lg font-medium text-gray-700 dark:text-gray-300 mb-4"
+              >
+                Connect with me:
+              </h4>
+              <div class="flex flex-wrap gap-3" id="social-links">
+                <!-- Social links will be added by JavaScript -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education section -->
+    <section
+      id="education"
+      class="py-24 px-4 bg-white dark:bg-gray-900 sm:px-6 lg:px-8"
+    >
+      <div class="max-w-4xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+          <div class="text-center mb-6">
+            <h2
+              class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4"
+            >
+              My
+              <span class="text-indigo-600 dark:text-indigo-400"
+                >Education</span
+              >
+            </h2>
+            <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+          </div>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            My academic journey and qualifications
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative">
+          <!-- Timeline line -->
+          <div
+            class="hidden sm:block absolute left-1/2 h-full w-0.5 bg-gray-200 dark:bg-gray-700 transform -translate-x-1/2"
+          ></div>
+
+          <!-- Education Items -->
+          <div class="space-y-8 sm:space-y-12">
+            <!-- Education Item 1 -->
+            <div class="relative flex flex-col sm:flex-row sm:text-right">
+              <!-- For mobile - centered content -->
+              <div class="sm:hidden mb-4 flex justify-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center"
+                >
+                  <i data-feather="book" class="text-indigo-500 w-6 h-6"></i>
+                </div>
+              </div>
+
+              <!-- For desktop - left side -->
+              <div class="hidden sm:flex sm:w-1/2 justify-end pr-8">
+                <div class="w-full max-w-xs">
+                  <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+                  >
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                      Bachelor's Degree
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">
+                      Computer Science
+                    </p>
+                    <div
+                      class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-1"
+                    >
+                      <i data-feather="calendar" class="mr-2 w-4 h-4"></i>
+                      2023 - 2026 (Pursuing..)
+                    </div>
+                    <p
+                      class="text-indigo-600 dark:text-indigo-400 font-medium"
+                    ></p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                      Rajarshi Shahu Mahavidyalaya, Latur (Autonomous).
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Timeline dot (desktop) -->
+              <div
+                class="hidden sm:flex w-12 h-12 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-white dark:bg-gray-800 border-4 border-indigo-500 shadow-md items-center justify-center"
+              >
+                <i data-feather="book" class="text-indigo-500 w-6 h-6"></i>
+              </div>
+
+              <!-- Right side (empty for first item) -->
+              <div class="hidden sm:flex sm:w-1/2 justify-start pl-8"></div>
+
+              <!-- Mobile content -->
+              <div
+                class="sm:hidden bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+              >
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                  Bachelor's Degree
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-2">
+                  Computer Science
+                </p>
+                <div
+                  class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-1"
+                >
+                  <i data-feather="calendar" class="mr-2 w-4 h-4"></i>
+                  2023 - 2026 (Pursuing..)
+                </div>
+                <p class="text-indigo-600 dark:text-indigo-400 font-medium"></p>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                  Rajarshi Shahu Mahavidyalaya, Latur (Autonomous).
+                </p>
+              </div>
+            </div>
+
+            <!-- Education Item 2 -->
+            <div class="relative flex flex-col sm:flex-row sm:text-left">
+              <!-- For mobile - centered content -->
+              <div class="sm:hidden mb-4 flex justify-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center"
+                >
+                  <i data-feather="award" class="text-indigo-500 w-6 h-6"></i>
+                </div>
+              </div>
+
+              <!-- Left side (empty for second item) -->
+              <div class="hidden sm:flex sm:w-1/2 justify-end pr-8"></div>
+
+              <!-- Timeline dot (desktop) -->
+              <div
+                class="hidden sm:flex w-12 h-12 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-white dark:bg-gray-800 border-4 border-indigo-500 shadow-md items-center justify-center"
+              >
+                <i data-feather="award" class="text-indigo-500 w-6 h-6"></i>
+              </div>
+
+              <!-- For desktop - right side -->
+              <div class="hidden sm:flex sm:w-1/2 justify-start pl-8">
+                <div class="w-full max-w-xs">
+                  <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+                  >
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                      Higher Secondary (12th)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">
+                      Science Stream (PCM)
+                    </p>
+                    <div
+                      class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-1"
+                    >
+                      <i data-feather="calendar" class="mr-2 w-4 h-4"></i>
+                      2020 - 2021
+                    </div>
+                    <p class="text-indigo-600 dark:text-indigo-400 font-medium">
+                      75%
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                      Shri CHHATRAPATI SHIVAJI College, Omerga
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mobile content -->
+              <div
+                class="sm:hidden bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+              >
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                  Higher Secondary (12th)
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-2">
+                  Science Stream (PCM)
+                </p>
+                <div
+                  class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-1"
+                >
+                  <i data-feather="calendar" class="mr-2 w-4 h-4"></i>
+                  2020 - 2021
+                </div>
+                <p class="text-indigo-600 dark:text-indigo-400 font-medium">
+                  75%
+                </p>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                  Shri CHHATRAPATI SHIVAJI College, Omerga
+                </p>
+              </div>
+            </div>
+
+            <!-- Education Item 3 -->
+            <div class="relative flex flex-col sm:flex-row sm:text-right">
+              <!-- For mobile - centered content -->
+              <div class="sm:hidden mb-4 flex justify-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-white dark:bg-gray-800 shadow-md flex items-center justify-center"
+                >
+                  <i data-feather="award" class="text-indigo-500 w-6 h-6"></i>
+                </div>
+              </div>
+
+              <!-- For desktop - left side -->
+              <div class="hidden sm:flex sm:w-1/2 justify-end pr-8">
+                <div class="w-full max-w-xs">
+                  <div
+                    class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+                  >
+                    <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                      Secondary School (10th)
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-2">
+                      General Education
+                    </p>
+                    <div
+                      class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-1"
+                    >
+                      <i data-feather="calendar" class="mr-2 w-4 h-4"></i>
+                      2019
+                    </div>
+                    <p class="text-indigo-600 dark:text-indigo-400 font-medium">
+                      74%
+                    </p>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                      Kai. Sharnappa Malang Vidhalya Omerga
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Timeline dot (desktop) -->
+              <div
+                class="hidden sm:flex w-12 h-12 absolute left-1/2 transform -translate-x-1/2 rounded-full bg-white dark:bg-gray-800 border-4 border-indigo-500 shadow-md items-center justify-center"
+              >
+                <i data-feather="award" class="text-indigo-500 w-6 h-6"></i>
+              </div>
+
+              <!-- Right side (empty for third item) -->
+              <div class="hidden sm:flex sm:w-1/2 justify-start pl-8"></div>
+
+              <!-- Mobile content -->
+              <div
+                class="sm:hidden bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md"
+              >
+                <h3 class="text-lg font-bold text-gray-800 dark:text-white">
+                  Secondary School (10th)
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-2">
+                  General Education
+                </p>
+                <div
+                  class="flex items-center text-gray-500 dark:text-gray-400 text-sm mb-1"
+                >
+                  <i data-feather="calendar" class="mr-2 w-4 h-4"></i>
+                  2019
+                </div>
+                <p class="text-indigo-600 dark:text-indigo-400 font-medium">
+                  74%
+                </p>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">
+                  Kai. Sharnappa Malang Vidhalya Omerga
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project section code  -->
+
+    <section id="projects" class="pt-20 bg-white dark:bg-gray-900 py-6">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12 animate-fade-in-up">
+          <div class="text-center mb-6">
+            <h2
+              class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4"
+            >
+              My
+              <span class="text-indigo-600 dark:text-indigo-400">Projects</span>
+            </h2>
+            <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+          </div>
+          <p
+            class="mt-4 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+          >
+            Here are some of my recent works.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg project-card bg-white dark:bg-gray-800"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="assets/images/herbal.png"
+                alt="Herbal shop Website"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-100"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                Herbal shop Website
+              </h3>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200"
+                  >Tailwind css</span
+                >
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 bg-black bg-opacity-80 project-hover flex flex-col justify-between p-6"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-white mb-4">
+                  Herbal shop Website
+                </h3>
+                <p class="text-gray-300">
+                  A comprehensive herbal shop website featuring product
+                  listings, user reviews, and a secure checkout process.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg project-card bg-white dark:bg-gray-800"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="assets/images/milkdairy.png"
+                alt="Milk Dairy"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-100"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                Milk Dairy
+              </h3>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200"
+                  >Tailwind css</span
+                >
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 bg-black bg-opacity-80 project-hover flex flex-col justify-between p-6"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-white mb-4">Milk Dairy</h3>
+                <p class="text-gray-300">
+                  A modern milk dairy website which helps to the milk dairy
+                  business to manage there data and milk collections easily.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="group relative overflow-hidden rounded-xl shadow-lg project-card bg-white dark:bg-gray-800"
+          >
+            <div class="h-48 overflow-hidden">
+              <img
+                src="assets/images/ratkal.png"
+                alt="RC Ratkal Steel Shop"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-100"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-2">
+                RC Ratkal Steel Shop
+              </h3>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span
+                  class="px-3 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200"
+                  >React</span
+                >
+                <span
+                  class="px-3 py-1 text-xs font-medium rounded-full bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200"
+                  >Tailwind css</span
+                >
+              </div>
+            </div>
+            <div
+              class="absolute inset-0 bg-black bg-opacity-80 project-hover flex flex-col justify-between p-6"
+            >
+              <div>
+                <h3 class="text-xl font-bold text-white mb-4">
+                  RC Ratkal Steel Shop
+                </h3>
+                <p class="text-gray-300">
+                  A steel shop website that showcases various steel products,
+                  their specifications.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills section code  -->
+
+    <section
+      id="skills"
+      class="pt-20 py-16 px-4 bg-white dark:bg-gray-900 sm:px-6 lg:px-8 bg-white dark:bg-gray-900"
+    >
+      <div class="max-w-6xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-4">
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4"
+          >
+            Technical
+            <span class="text-indigo-600 dark:text-indigo-400">Skill's</span>
+          </h2>
+          <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+        </div>
+
+        <p
+          class="text-lg mb-10 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+        >
+          Technologies and tools I use to build modern, responsive web
+          applications
+        </p>
+
+        <!-- Skills Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="skills-grid">
+          <!-- Skills will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Additional Skills Tags -->
+        <div class="mt-28" id="soft-skills-section">
+          <div class="text-center mb-6">
+            <h2
+              class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4"
+            >
+              Soft
+              <span class="text-indigo-600 dark:text-indigo-400">Skill's</span>
+            </h2>
+            <div class="w-20 h-1 bg-indigo-600 mx-auto"></div>
+          </div>
+          <div
+            class="flex flex-wrap justify-center gap-4 mt-10 max-w-3xl mx-auto"
+            id="soft-skills-tags"
+          >
+            <!-- Soft skills will be inserted here by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section code  -->
+
+    <section
+      id="contact"
+      class="pt-20 py-16 px-4 bg-gray-50 dark:bg-gray-900 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900 relative z-10"
+    >
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl sm:text-4xl font-bold text-gray-800 dark:text-white mb-4"
+          >
+            Get In
+            <span class="text-indigo-600 dark:text-indigo-400">Touch</span>
+          </h2>
+          <div class="w-20 h-1 bg-indigo-600 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Have a project in mind or want to collaborate? Send me a message!
+          </p>
+        </div>
+
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 sm:p-8">
+          <!-- Decorative SVG elements -->
+          <svg
+            class="absolute right-10 top-10 hidden lg:block"
+            width="80"
+            height="80"
+            viewBox="0 0 80 80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M40 0C17.9086 0 0 17.9086 0 40C0 62.0914 17.9086 80 40 80C62.0914 80 80 62.0914 80 40C80 17.9086 62.0914 0 40 0Z"
+              stroke="#4F46E5"
+              stroke-width="2"
+              stroke-dasharray="0 1"
+              fill="none"
+            />
+          </svg>
+
+          <svg
+            class="absolute left-10 bottom-10 hidden lg:block"
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M30 0L35.3553 15.3553L50.7107 20.7107L45.3553 35.3553L50.7107 50.7107L35.3553 45.3553L30 60L24.6447 45.3553L9.28934 50.7107L14.6447 35.3553L9.28934 20.7107L24.6447 15.3553L30 0Z"
+              fill="#4F46E5"
+              fill-opacity="0.2"
+            />
+          </svg>
+
+          <form id="contactForm" class="space-y-6 relative z-10">
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Your Name
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-gray-400"
+                  >
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="pl-10 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white py-2 px-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  placeholder="Virat Kohli"
+                />
+              </div>
+              <p id="nameError" class="mt-1 text-sm text-red-500 hidden"></p>
+            </div>
+
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Your Email
+              </label>
+              <div class="relative">
+                <div
+                  class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-gray-400"
+                  >
+                    <path
+                      d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                    ></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="pl-10 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white py-2 px-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  placeholder="virat@kohli.com"
+                />
+              </div>
+              <p id="emailError" class="mt-1 text-sm text-red-500 hidden"></p>
+            </div>
+
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+              >
+                Your Message
+              </label>
+              <div class="relative">
+                <div class="absolute top-3 left-3">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="text-gray-400"
+                  >
+                    <path
+                      d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="pl-10 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 text-gray-800 dark:text-white py-2 px-3 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
+                  placeholder="Hi there, I'd like to talk about..."
+                ></textarea>
+              </div>
+              <p id="messageError" class="mt-1 text-sm text-red-500 hidden"></p>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                id="submitBtn"
+                class="w-full flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-3 px-4 rounded-lg transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="h-5 w-5"
+                >
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Notification Popup -->
+      <div
+        id="notification"
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden"
+      >
+        <div
+          class="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-md w-full p-6 relative overflow-hidden"
+        >
+          <!-- Animated background decoration -->
+          <svg
+            id="successBg"
+            class="absolute -right-10 -top-10 opacity-10"
+            width="200"
+            height="200"
+            viewBox="0 0 200 200"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M100 0C44.7715 0 0 44.7715 0 100C0 155.228 44.7715 200 100 200C155.228 200 200 155.228 200 100C200 44.7715 155.228 0 100 0Z"
+              stroke="#10B981"
+              stroke-width="4"
+              stroke-dasharray="0 1"
+              fill="none"
+            />
+          </svg>
+
+          <div class="flex justify-between items-start mb-4 relative z-10">
+            <div class="flex items-center">
+              <svg
+                id="successIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#10B981"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-6 w-6 text-green-500 mr-2 hidden"
+              >
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+              </svg>
+              <svg
+                id="errorIcon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#EF4444"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-6 w-6 text-red-500 mr-2 hidden"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <h3
+                id="notificationTitle"
+                class="text-xl font-bold text-gray-800 dark:text-white"
+              ></h3>
+            </div>
+            <button
+              id="closeNotification"
+              class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-5 w-5"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          <div class="space-y-3 mt-4 relative z-10">
+            <p
+              id="notificationMessage"
+              class="text-gray-600 dark:text-gray-300"
+            ></p>
+
+            <div
+              id="messageDetails"
+              class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 mt-4 hidden"
+            >
+              <h4 class="font-medium text-gray-800 dark:text-gray-200 mb-2">
+                Your message details:
+              </h4>
+              <p class="text-gray-700 dark:text-gray-300">
+                <span class="font-medium">Name:</span>
+                <span id="detailName"></span>
+              </p>
+              <p class="text-gray-700 dark:text-gray-300">
+                <span class="font-medium">Email:</span>
+                <span id="detailEmail"></span>
+              </p>
+              <p class="text-gray-700 dark:text-gray-300 mt-2">
+                <span class="font-medium">Message:</span>
+              </p>
+              <p
+                id="detailMessage"
+                class="text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-600 p-2 rounded mt-1"
+              ></p>
+            </div>
+          </div>
+
+          <div class="mt-6 relative z-10">
+            <button
+              id="closeNotificationBtn"
+              class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer section code  -->
+
+    <footer class="bg-gray-50 pt-6 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Brand Info -->
+                <div class="space-y-4 animate-fade-in-up">
+                    <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                        <span class="text-indigo-600 dark:text-indigo-400">&lt;</span>
+                        Samarth Heble
+                        <span class="text-indigo-600 dark:text-indigo-400">&gt;</span>
+                    </h3>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Passionate full-stack developer creating digital experiences that matter.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- LinkedIn -->
+                        <a href="https://www.linkedin.com/in/samarth-heble-9a67342ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="p-2 rounded-full border border-blue-300 dark:border-blue-600 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-gray-600 dark:text-gray-400 transition-all duration-300 hover-scale"
+                           aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        
+                        <!-- Email -->
+                        <a href="mailto:sam31heble@gmail.com" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="p-2 rounded-full border border-red-200 dark:border-red-700 hover:text-red-500 dark:hover:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/30 text-gray-600 dark:text-gray-400 transition-all duration-300 hover-scale"
+                           aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                        
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/mr.samarth_h30" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="p-2 rounded-full border border-pink-200 dark:border-pink-700 hover:text-pink-600 dark:hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-900/30 text-gray-600 dark:text-gray-400 transition-all duration-300 hover-scale"
+                           aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-4 animate-fade-in-up" style="animation-delay: 0.1s">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li class="hover-move-right">
+                            <a href="/" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+                        </li>
+                        <li class="hover-move-right">
+                            <a href="#about" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</a>
+                        </li>
+                        <li class="hover-move-right">
+                            <a href="#education" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Education</a>
+                        </li>
+                        <li class="hover-move-right">
+                            <a href="#projects" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Projects</a>
+                        </li>
+                        <li class="hover-move-right">
+                            <a href="#skills" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Skills</a>
+                        </li>
+                        <li class="hover-move-right">
+                            <a href="#contact" class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-4 animate-fade-in-up" style="animation-delay: 0.2s">
+                    <h3 class="text-lg font-semibold text-gray-800 dark:text-white">Get In Touch</h3>
+                    <div class="space-y-3">
+                        <p class="text-gray-600 dark:text-gray-300 flex items-start">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-1 mr-2 text-indigo-600 dark:text-indigo-400">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            sam31heble@gmail.com
+                        </p>
+                        <p class="text-gray-600 dark:text-gray-300">
+                            omerga, Maharashtra, India
+                        </p>
+                    </div>
+                    <button id="backToTop" class="mt-4 flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition-all hover-scale">
+                        Back to Top 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="19" x2="12" y2="5"></line>
+                            <polyline points="5 12 12 5 19 12"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-12 pt-6 border-t border-gray-200 dark:border-gray-800 text-center animate-fade-in-up" style="animation-delay: 0.3s">
+                <p class="text-gray-500 dark:text-gray-400">
+                    Made with 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline text-red-500">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg> 
+                    by Samarth Heble • © <span id="currentYear"></span> All rights reserved
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
