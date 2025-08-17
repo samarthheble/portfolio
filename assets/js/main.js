@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {
         name: "Instagram",
         icon: "instagram",
-        url: "https://instagram.com/mr.samarth_h30",
+        url: "https://instagram.com/samarth_h30",
         color:
           "hover:text-pink-600 dark:hover:text-pink-400 hover:bg-pink-50 dark:hover:bg-pink-900/30",
         border: "border-pink-200 dark:border-pink-700",
